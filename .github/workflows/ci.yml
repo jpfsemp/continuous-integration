@@ -29,12 +29,12 @@ jobs:
         run: | 
           npm install remark-cli remark-preset-lint-consistent
           npx remark . --use remark-preset-lint-consistent --frail
-          ls -lha
+          ls -lha node_modules
           
       - uses: actions/upload-artifact@v3.1.2
         name: Upload a Build Artifact
         with:
           name: remark-lint-report
-          path: public/
+          path: README.md
 
     
